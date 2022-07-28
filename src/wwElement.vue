@@ -133,7 +133,7 @@ export default {
             }
 
             return {
-                type: 'pie',
+                type: 'doughnut',
                 data: {
                     labels,
                     datasets,
