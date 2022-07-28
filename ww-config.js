@@ -12,7 +12,7 @@ export default {
         label: 'Chart - Doughnut - Gaspachio',
         icon: 'fontawesome/solid/chart-pie',
         customStylePropertiesOrder: [
-            ['legendPosition', 'legendAlignement', 'legendColor', 'legendSize', 'legendColor'],
+            ['legendPosition', 'legendAlignement', 'legendColor', 'legendSize'],
         ],
         customSettingsPropertiesOrder: [
             'dataType',
