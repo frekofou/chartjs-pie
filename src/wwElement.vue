@@ -6,6 +6,7 @@
 
 <script>
 import { Chart, registerables } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 Chart.register(...registerables);
 
 export default {
@@ -151,7 +152,12 @@ export default {
                                 color: this.content.legendColor,
                                 font: { size: parseInt(this.content.legendSize) },
                             },
+                        datalabels: {
+                            display: this.content.dataLabelsDisplay,
+                            color: this.content.dataLabelsColor,
                         },
+                        },
+                        
                     },
                 },
             };
@@ -213,6 +219,14 @@ export default {
         'content.groupBy'() {
             // eslint-disable-next-line vue/require-explicit-emits
             this.$emit('update:content:effect', { groupByProperty: null });
+        }, 
+        'content.dataLabelsDisplay'() {
+            if (this.chartInstance) this.chartInstance.destroy();
+            this.initChart();
+        },  
+        'content.dataLabelsColor'() {
+            if (this.chartInstance) this.chartInstance.destroy();
+            this.initChart();
         },
     },
     mounted() {

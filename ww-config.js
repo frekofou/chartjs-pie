@@ -85,6 +85,13 @@ export default {
             options: { nullable: true },
             hidden: content => !content.isLegend,
         },
+        dataLabelsDisplay: {
+            type: 'OnOff',
+            label: 'Datalabels display',
+            bindable: false,
+            responsive: false,
+            defaultValue: false,
+        }, 
         dataType: {
             label: 'Mode',
             type: 'TextSelect',
