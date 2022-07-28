@@ -7,7 +7,8 @@
 <script>
 import { Chart, registerables } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
-Chart.register(...registerables);
+
+Chart.register(...registerables, ChartDataLabels);
 
 export default {
     props: {
@@ -152,10 +153,10 @@ export default {
                                 color: this.content.legendColor,
                                 font: { size: parseInt(this.content.legendSize) },
                             },
+                        },
                         datalabels: {
                             display: this.content.dataLabelsDisplay,
                             color: this.content.dataLabelsColor,
-                        },
                         },
                         
                     },

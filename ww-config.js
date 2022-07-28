@@ -91,7 +91,12 @@ export default {
             bindable: false,
             responsive: false,
             defaultValue: false,
-        }, 
+        },
+        dataLabelsColor: {
+            label: 'DataLabels color',
+            type: 'Color',
+            options: { nullable: true },
+        },
         dataType: {
             label: 'Mode',
             type: 'TextSelect',
