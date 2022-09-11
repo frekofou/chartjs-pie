@@ -3,6 +3,7 @@
 This is a fork for Weweb PIE. It's a very basic one with a background and a container
 
 - Change pie to doughnut
+- add k€
 
 ## Installation
 

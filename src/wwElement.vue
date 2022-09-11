@@ -157,6 +157,9 @@ export default {
                         datalabels: {
                             display: this.content.dataLabelsDisplay,
                             color: this.content.dataLabelsColor,
+                              formatter: function (value, context) {
+                                 return context.chart.data.datasets[0].data[context.dataIndex] + ' k€';
+                             }
                         },
                         
                     },
